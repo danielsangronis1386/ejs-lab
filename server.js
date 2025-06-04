@@ -65,7 +65,7 @@ const RESTAURANT = {
 //routes
 
 // Exercise 1: Home Page Route 
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.render("home", {restaurant: RESTAURANT})
 })
 
