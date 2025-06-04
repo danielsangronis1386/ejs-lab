@@ -5,6 +5,11 @@ const express = require('express')
 // Create an Express app
 const app = express()
 
+//EJS for rendering views
+app.set('view engine', "ejs")
+
+//
+
 //Restaurant Data 
 const RESTAURANT = {
   name: 'The Green Byte Bistro',
