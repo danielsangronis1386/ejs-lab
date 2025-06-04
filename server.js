@@ -5,7 +5,7 @@ const express = require('express')
 // Create an Express app
 const app = express()
 
-//Const
+//Restaurant Data 
 const RESTAURANT = {
   name: 'The Green Byte Bistro',
   isOpen: true,
@@ -58,9 +58,10 @@ const RESTAURANT = {
 
 
 //routes
-//Creat a route that responds 
-app.get('/', (req, res) => {
-  res.send('Hello There!')
+
+// Exercise 1: Home Page Route 
+app.get("/", (req, res) => {
+  res.render("home", {restaurant: RESTAURANT})
 })
 
 
