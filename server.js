@@ -69,7 +69,10 @@ app.get("/home", (req, res) => {
   res.render("home", {restaurant: RESTAURANT})
 })
 
-
+// Exercise 2: Menu Page Route
+app.get("/menu", (req, res) => {
+  res.render("menu", {menu: RESTAURANT.menu})
+})
 
 
 
