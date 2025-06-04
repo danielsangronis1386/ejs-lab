@@ -9,5 +9,11 @@
   <h1><%= restaurant.name%></h1>
   <p> <strong>address:</strong><%= restaurant.address %></p>
   <p> <strong>phone:</strong><%= restaurant.phone %></p>
+
+  <% if (restaurant.isOpen) {%>
+<p> style="color: green"> Yes we are open!</p>
+ <% } else { %>
+<p> style="color: red"> Sorry, we are close.</p>
+ <% } %>
 </body>
 </html>
