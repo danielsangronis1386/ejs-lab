@@ -74,7 +74,7 @@ app.get("/menu", (req, res) => {
   res.render("menu", {menu: RESTAURANT.menu})
 })
 
-// Exercise 3 Categories 
+// Exercise 3 Categories Page Routes
 app.get('/menu/:category', (req, res) => {
   const category = req.params.category.toLowerCase();
   const menuItems = RESTAURANT.menu.filter(item => item.category === category);
