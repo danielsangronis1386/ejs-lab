@@ -6,7 +6,48 @@
   <title>Menu</title>
 </head>
 <body>
+   <%- include('./partials/nav') %>
+
   <h1>Full Menu</h1>
+
+  <h2>Mains</h2>
+  <% menu.forEach(item => { %>
+    <% if (item.category === 'mains') { %>
+      <div>
+        <h3><%= item.name %></h3>
+        <p><strong>Price:</strong> $<%= item.price %></p>
+        <p><strong>Rating:</strong> <%= item.rating %> / 5</p>
+        <p><%= item.details %></p>
+        <hr>
+      </div>
+    <% } %>
+  <% }); %>
+
+  <h2>Desserts</h2>
+  <% menu.forEach(item => { %>
+    <% if (item.category === 'desserts') { %>
+      <div>
+        <h3><%= item.name %></h3>
+        <p><strong>Price:</strong> $<%= item.price %></p>
+        <p><strong>Rating:</strong> <%= item.rating %> / 5</p>
+        <p><%= item.details %></p>
+        <hr>
+      </div>
+    <% } %>
+  <% }); %>
+
+  <h2>Sides</h2>
+  <% menu.forEach(item => { %>
+    <% if (item.category === 'sides') { %>
+      <div>
+        <h3><%= item.name %></h3>
+        <p><strong>Price:</strong> $<%= item.price %></p>
+        <p><strong>Rating:</strong> <%= item.rating %> / 5</p>
+        <p><%= item.details %></p>
+        <hr>
+      </div>
+    <% } %>
+  <% }); %>
 
 
 
