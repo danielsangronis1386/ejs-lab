@@ -7,7 +7,31 @@
 </head>
 <body>
   <h1>Full Menu</h1>
-  <% menu.forEach(function(item){ %>
+  <h2>Mains</h2>
+
+  <% menu.forEach(function(item) { if (item.category === 'main')  %>
+<div>
+    <h3><%= item.name %> - $<%= item.price.toFixed(2) %></h3>
+    <p><%= item.details %></p>
+    <p>Rating: <%= item.rating %>/5</p>
+</div>
+<hr>
+<% }) %>
+
+<h2>Desserts</h2>
+
+  <% menu.forEach(function(item) { if (item.category === 'desserts')  %>
+<div>
+    <h3><%= item.name %> - $<%= item.price.toFixed(2) %></h3>
+    <p><%= item.details %></p>
+    <p>Rating: <%= item.rating %>/5</p>
+</div>
+<hr>
+<% }) %>
+
+<h2>Desserts</h2>
+
+  <% menu.forEach(function(item) { if (item.category === 'sides')  %>
 <div>
     <h3><%= item.name %> - $<%= item.price.toFixed(2) %></h3>
     <p><%= item.details %></p>
