@@ -74,6 +74,17 @@ app.get("/menu", (req, res) => {
   res.render("menu", {menu: RESTAURANT.menu})
 })
 
+// Exercise 3 Categories 
+app.get('/menu/:category', (req, res) => {
+  const category = req.params.category.toLowerCase();
+  const menuItems = RESTAURANT.menu.filter(item => item.category === category);
+  const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+
+  res.render('category', {
+    category: capitalizedCategory,
+    menuItems
+  });
+});
 
 
 
